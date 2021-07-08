@@ -14,6 +14,7 @@ var chat=["a si", ["a","b","c"], "apoco"];
 
 function saludar(){
 	alert(starts[1]);
+	//cuando corra la función saludar responda un saludo random
 }
 
 
