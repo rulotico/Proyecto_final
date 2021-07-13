@@ -29,29 +29,34 @@ var user={
 
 //variables globales
 
-var flag_saludo=false;
-var flag_name=false;
 const random = Math.floor(Math.random() * starts.length);
+
+
+var flags={
+	"saludo":false,
+	"name":false,
+	"age":false,
+	"nicknames":false
+}
 
 
 function maria(res){
 
-
 	// El saludo
-	if (!flag_saludo) {
+	if (!flags.saludo) {
 		
 		console.log(starts[random]+", que tal..");
-		flag_saludo=true;
+		flags.saludo=true;
 
-	}else if(flag_name){
+	}else if(flags.name){
 
 		user.name=res;
-		console.log(starts[random]+user.name);
+		console.log(starts[random]+" "+user.name);
 
-	}else if(!user.name || flag_name==false){
+	}else if(!user.name || flags.name==false){
 
 		console.log("Hola, como te llamas?");
-		flag_name=true;
+		flags.name=true;
 
 	}
 
@@ -68,11 +73,10 @@ function maria(res){
 
 
 //Primero saluda ✅
-//Segundo me pregunta mi nombre
-//Tercero me pregunta mi edad
-//Si tengo auto o no?
-//Tienes apodos
-//Despedida. 
+//Segundo me pregunta mi nombre ✅
+//Tercero me pregunta mi edad 👀
+//Cuarto Tienes apodos 👀
+//Despedida. 👀
 
 
 
