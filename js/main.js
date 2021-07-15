@@ -14,18 +14,6 @@ var chat=["a si", ["a","b","c"], "apoco"];
 
 //objetos
 
-var user={ 
-	"name":"",
-	"nicknames":"",
-	"age":0,
-	"second_name":"",
-	"auto":{
-		"marca":"seat",
-		"modelo":"leon",
-		"year":"2019",
-		"color":"white"
-	}
-}
 
 //variables globales
 
@@ -39,35 +27,72 @@ var flags={
 	"nicknames":false
 }
 
+var user={ 
+	"name":"",
+	"nicknames":"",
+	"age":0
+}
 
 function maria(res){
 
 	// El saludo
 	if (!flags.saludo) {
-		
+
+		// reasignación
+		//----
+		// conversación
 		console.log(starts[random]+", que tal..");
+		console.log("Como te llamas?");
+		// indicador
 		flags.saludo=true;
 
-	}else if(flags.name){
+		
 
-		user.name=res;
+	}else if(!flags.name){
+		
+		// reasignación
+		user.name=res; 
+			
+		// conversación	
 		console.log(starts[random]+" "+user.name);
+		console.log("Cual es tu edad?")
 
-	}else if(!user.name || flags.name==false){
+		// indicador
+		flags.name=true;	
+			
 
-		console.log("Hola, como te llamas?");
-		flags.name=true;
+	}else if(!flags.age){
 
+		// reasignación
+		user.age=res;
+
+		// conversación
+		console.log("Wow,"+user.name+". "+user.age+" anioos");
+		console.log("Tienes algun apodo?")
+		// indicador
+		flags.age=true;
+
+
+	}else if(!flags.nicknames){
+
+		// reasignación
+		user.nicknames=res;
+
+		// conversación
+		console.log("oh ya veo, " + user.nicknames)
+
+		// indicador
+		flags.nicknames=true;
+
+	}else if(flags.nicknames||flags.name||flags.age|| flags.saludo){
+			console.log("======================")
+			console.log("Esta fue una buena charla, me dio gusto conocerte, me tengo que ir. BYE")
+			console.log("======================")
 	}
 
 
 
-	// if(!user.name){
-	// 	console.log("Hola, como te llamas?");
-	// }
 
-	// console.log(starts[1]+" "+user.name);
-	//cuando corra la función saludar responda un saludo random
 }
 
 
