@@ -52,45 +52,65 @@ function maria(res){
 		
 		// reasignación
 		user.name=res; 
-			
-		// conversación	
-		console.log(starts[random]+" "+user.name);
-		console.log("Cual es tu edad?")
 
-		// indicador
-		flags.name=true;	
-			
+		if (user.name) {
+
+			// conversación	
+			console.log(starts[random]+" "+user.name);
+			console.log("Cual es tu edad?")
+
+			// indicador
+			flags.name=true;
+
+		} else {
+
+			console.log("no me haz dado tu nombre")
+
+		}
+	
 
 	}else if(!flags.age){
 
 		// reasignación
 		user.age=res;
 
-		// conversación
-		console.log("Wow,"+user.name+". "+user.age+" anioos");
-		console.log("Tienes algun apodo?")
-		// indicador
-		flags.age=true;
+		if (user.age) {
 
+			// conversación
+			console.log("Wow,"+user.name+". "+user.age+" anioos");
+			console.log("Tienes algun apodo?")
+			// indicador
+			flags.age=true;
+
+		} else {
+			console.log("No me haz dado tu edad")
+		}
 
 	}else if(!flags.nicknames){
 
 		// reasignación
 		user.nicknames=res;
 
-		// conversación
-		console.log("oh ya veo, " + user.nicknames)
+		if (user.nicknames) {
+			// conversación
+			console.log("oh ya veo, " + user.nicknames)
 
-		// indicador
-		flags.nicknames=true;
+			// indicador
+			flags.nicknames=true;
+
+		} else {
+
+			console.log("No me haz dado tu apodo")
+
+		}
 
 	}else if(flags.nicknames||flags.name||flags.age|| flags.saludo){
+
 			console.log("======================")
 			console.log("Esta fue una buena charla, me dio gusto conocerte, me tengo que ir. BYE")
 			console.log("======================")
+	
 	}
-
-
 
 
 }
