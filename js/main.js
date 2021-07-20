@@ -1,39 +1,19 @@
-// Tipos de variables
+// #maria the bot
+// Este es un bot de conversación bebé si quieres saber mandame un tweet a @rulotico
 
-var texto = "hola como estas"; //texto
-var x = 20; //númericas
-var flag= true; //boolean
-
-
-
-// #maria
-
-//arreglos
-var starts=["hola","que onda!","hey","hello"];
-var chat=["a si", ["a","b","c"], "apoco"];
-
-//objetos
-
-
-//variables globales
-
-const random = Math.floor(Math.random() * starts.length);
-
-
-var flags={
-	"saludo":false,
-	"name":false,
-	"age":false,
-	"nicknames":false
+//----declarar var / validar / operación recurrente
+for (var i = 1; i < 2000; i++) {
+	console.log(i)
+	
 }
 
-var user={ 
-	"name":"",
-	"nicknames":"",
-	"age":0
-}
+
+
 
 function maria(res){
+
+	flags=abc.flags;
+	starts=abc.starts;
 
 	// El saludo
 	if (!flags.saludo) {
@@ -41,7 +21,7 @@ function maria(res){
 		// reasignación
 		//----
 		// conversación
-		console.log(starts[random]+", que tal..");
+		console.log(starts[abc.random]+", que tal..");
 		console.log("Como te llamas?");
 		// indicador
 		flags.saludo=true;
@@ -57,14 +37,14 @@ function maria(res){
 
 			// conversación	
 			console.log(starts[random]+" "+user.name);
-			console.log("Cual es tu edad?")
+			console.log("Cual es tu edad?");
 
 			// indicador
 			flags.name=true;
 
 		} else {
 
-			console.log("no me haz dado tu nombre")
+			console.log("no me haz dado tu nombre");
 
 		}
 	
@@ -78,12 +58,12 @@ function maria(res){
 
 			// conversación
 			console.log("Wow,"+user.name+". "+user.age+" anioos");
-			console.log("Tienes algun apodo?")
+			console.log("Tienes algun apodo?");
 			// indicador
 			flags.age=true;
 
 		} else {
-			console.log("No me haz dado tu edad")
+			console.log("No me haz dado tu edad");
 		}
 
 	}else if(!flags.nicknames){
@@ -93,7 +73,7 @@ function maria(res){
 
 		if (user.nicknames) {
 			// conversación
-			console.log("oh ya veo, " + user.nicknames)
+			console.log("oh ya veo, " + user.nicknames);
 
 			// indicador
 			flags.nicknames=true;
@@ -116,17 +96,9 @@ function maria(res){
 }
 
 
-
+//Lógica de construcción
 //Primero saluda ✅
 //Segundo me pregunta mi nombre ✅
 //Tercero me pregunta mi edad 👀
 //Cuarto Tienes apodos 👀
 //Despedida. 👀
-
-
-
-
-
-
-// alert("Hola, si funciona");
-// console.log(texto);
