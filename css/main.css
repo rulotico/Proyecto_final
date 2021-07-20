@@ -18,3 +18,25 @@ h1{
 	border-radius: var(--radius);
 	display:inline;
 }
+
+.carita_maria{
+	font-size: 100px;
+}
+
+#respond{
+
+	font-size: 100px;
+	color: var(--white);
+	font-weight: 700;
+
+}
+
+.carita_maria, #respond{
+	text-align: center;
+}
+
+#respond_user{
+	height: 50px;
+	width: 510px;
+}
+

@@ -2,18 +2,36 @@
 // Este es un bot de conversación bebé si quieres saber mandame un tweet a @rulotico
 
 //----declarar var / validar / operación recurrente
-for (var i = 1; i < 2000; i++) {
-	console.log(i)
+//Este es un for y su formato
+for (var i = 1; i <= 2; i++) {
+
+	console.log(i);
+	//Recuerden que pueden usar un if aquí dentro
 	
 }
 
+//Este es un while y su formato.
+var x=0;
+do{
 
+console.log(x);
+x= x + 1;
+
+}while(x<5);
+
+
+
+// FUNCION 
+
+flags=abc.flags;
+starts=abc.starts;
+user=abc.user;
+
+var r_element=document.getElementById("respond")
 
 
 function maria(res){
 
-	flags=abc.flags;
-	starts=abc.starts;
 
 	// El saludo
 	if (!flags.saludo) {
@@ -21,8 +39,7 @@ function maria(res){
 		// reasignación
 		//----
 		// conversación
-		console.log(starts[abc.random]+", que tal..");
-		console.log("Como te llamas?");
+		r_element.innerHTML = starts[abc.random]+", que tal.." + "¿Como te llamas?";
 		// indicador
 		flags.saludo=true;
 
@@ -44,7 +61,7 @@ function maria(res){
 
 		} else {
 
-			console.log("no me haz dado tu nombre");
+			r_element.innerHTML = "no me haz dado tu nombre";
 
 		}
 	
