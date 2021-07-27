@@ -26,12 +26,17 @@ p{
 	font-size: var(--p);
 }
 
+footer{
+	color: var(--white);
+}
 
-
+a{
+	color: var(--primary-color);
+}
 
 .button{
 	background-color: var(--primary-color);
-	color:var(--white);
+	color:var(--black);
 	padding: var(--space-2);
 	border-radius: var(--radius);
 	display:inline;

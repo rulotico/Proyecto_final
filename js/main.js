@@ -43,8 +43,6 @@ function maria(res){
 		// indicador
 		flags.saludo=true;
 
-		
-
 	}else if(!flags.name){
 		
 		// reasignación
@@ -62,6 +60,7 @@ function maria(res){
 		} else {
 
 			r_element.innerHTML = "no me haz dado tu nombre";
+
 
 		}
 	
@@ -109,6 +108,8 @@ function maria(res){
 	
 	}
 
+
+	return true;
 
 }
 

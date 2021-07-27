@@ -11,11 +11,12 @@ var abc={
 	"starts":["hola","que onda!","hey tu","holi"],
 	"flags":{"saludo":false,"name":false,"age":false,"nicknames":false},
 	"user":{"name":"","nicknames":"","age":0},
-	"random":undefined
+	"random":function(){
+		 return Math.floor(Math.random() * abc.starts.length)
+	},
+	
 }
 
 
-
-abc.random = Math.floor(Math.random() * abc.starts.length);
 
 
